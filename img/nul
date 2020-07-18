@@ -60,10 +60,16 @@
     call plug#end()
 """ }}}
 
-"
+" Number of spaces
+set tabstop=4
+
+" Auto Indent
 set autoindent
 
-"
+" (no) wrap dynamic (not) wrap of long lines
+set wrap
+
+" The order of applying the encoding
 set termencoding=utf-8
 
 "
