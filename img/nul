@@ -39,11 +39,11 @@
 
     " Default to same plugin directory as vundle etc
     call plug#begin('~/.vim/bundle')
-
+    
     " Plugin colorscheme switcher
     Plug 'xolox/vim-colorscheme-switcher'
 
-    "
+    " Plugin different autoloads
     Plug 'xolox/vim-misc'
 
     " Plugins colorschemes
@@ -64,9 +64,6 @@
 
 " APPEARANCE AND BASIC EDITOR SETTINGS
 "=========================================
-" Number of spaces
-set tabstop=4
-
 " Auto Indent
 set autoindent
 
@@ -84,3 +81,7 @@ set t_Co=256
 
 " Display line numbers
 "set number
+
+" Number of spaces
+set tabstop=4
+
