@@ -72,7 +72,7 @@ set wrap
 " The order of applying the encoding
 set termencoding=utf-8
 
-"
+" Use more colors in the terminal
 set t_Co=256
 
 "
