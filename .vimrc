@@ -67,6 +67,8 @@
     set title                    " window title
     set number                   " line numbers
     set vb t_vb=                 " disable beep and flashing
+    set autoindent               " indent when moving to the next line while writing code
+    set showmatch                " show the matching part of the pair for [], {} and ()
     set nocompatible             " disable classic Vi compatibility mode
     set wrap                     " (no) wrap - dynamic (not) wrap of long lines
     set mouse=a                  " includes mouse support when working in the terminal (no GUI)
