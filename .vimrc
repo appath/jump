@@ -76,6 +76,10 @@
     set history=1024             " store more command history
     set laststatus=2             " always show statusline vim
     
+    set foldmethod=indent        " enable folding code
+    set foldlevel=99             " enable folding code
+    nnoremap <space> za          " enable folding with the spacebar code
+    
     let g:lightline = { 'colorscheme': 'powerline', }    " statusline vim
     
     """ Return to last edit position when opening files {{{
