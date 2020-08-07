@@ -78,7 +78,7 @@
     
     set foldmethod=indent        " define blocks based on indentation
     set foldlevel=99             " nesting level
-    nnoremap <space> za          " enable folding with the spacebar code
+    nnoremap <space> za          " collapse the code with a combination on the keyboard SPACE
     
     let g:lightline = { 'colorscheme': 'powerline', }    " statusline vim
     
