@@ -1,8 +1,9 @@
 """ Automatically create needed files and folders on first run (*nix only) {{{
     call system('mkdir -p $HOME/.vim/{autoload,bundle,swap,undo}')
     if !filereadable($HOME.'/.vimrc.plugins') | call system('touch $HOME/.vimrc.plugins') | endif
-    if !filereadable($HOME.'/.vimrc.first') | call system('touch $HOME/.vimrc.first') | endif
+    
 """ }}}
+
 """ vim-plug plugin manager {{{
     " Automatic installation
     " https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
@@ -33,6 +34,7 @@
         " Append to list of repo names to be disabled just like they're added
         " UnPlug 'junegunn/vim-plug'
         command! -nargs=1 -bar UnPlug call s:plugs_disable(<args>)
+        
     """ }}}
 
     " Default to same plugin directory as vundle etc
@@ -55,9 +57,28 @@
 
     " Initalize plugin system
     call plug#end()
+    
 """ }}}
-""" Local leading config, only for prerequisites and will be overwritten {{{
-    if filereadable($HOME.'/.vimrc.first')
-        source $HOME/.vimrc.first
-    endif
+
+""" Base settings {{{
+    set title                    " window title
+    set number                   " line numbers
+    set vb t_vb=                 " disable beep and flashing
+    set nocompatible             " disable classic Vi compatibility mode
+    set wrap                     " (no) wrap - dynamic (not) wrap of long lines
+    set mouse=a                  " includes mouse support when working in the terminal (no GUI)
+    set mousehide                " hide mouse in text input mode
+    set mps+=<:>                 " show matching brackets for HTML-tags
+    
+    
+    """ Return to last edit position when opening files {{{
+        augroup LastPosition
+            autocmd! BufReadPost *
+                \ if line("'\"") > 0 && line("'\"") <= line("$") |
+                \     exe "normal! g`\"" |
+                \ endif
+        augroup END
+        
+    """ }}}
+    
 """ }}}
