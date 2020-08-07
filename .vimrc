@@ -69,7 +69,8 @@
     set mouse=a                  " includes mouse support when working in the terminal (no GUI)
     set mousehide                " hide mouse in text input mode
     set mps+=<:>                 " show matching brackets for HTML-tags
-    
+    set noruler                  " disable ruler
+    set history=1024             " store more command history
     
     """ Return to last edit position when opening files {{{
         augroup LastPosition
