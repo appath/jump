@@ -40,6 +40,9 @@
     " Default to same plugin directory as vundle etc
     call plug#begin('~/.vim/bundle')
     
+    " Configuration status bar statusline vim
+    Plug 'itchyny/lightline.vim'
+    
     " Snippets like textmate
     if has('python') || has('python3')
         Plug 'honza/vim-snippets'
@@ -71,6 +74,9 @@
     set mps+=<:>                 " show matching brackets for HTML-tags
     set noruler                  " disable ruler
     set history=1024             " store more command history
+    set laststatus=2             " always show statusline vim
+    
+    let g:lightline = { 'colorscheme': 'powerline', }    " statusline vim
     
     """ Return to last edit position when opening files {{{
         augroup LastPosition
