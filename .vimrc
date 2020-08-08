@@ -85,6 +85,7 @@
     set foldlevel=99             " nesting level
     nnoremap <space> za          " collapse the code with a combination on the keyboard SPACE
     
+    let python_highlight_all = 1    " enable all Python syntax highlighting featurs
     let g:lightline = { 'colorscheme': 'powerline', }    " statusline vim
     
     """ Return to last edit position when opening files {{{
